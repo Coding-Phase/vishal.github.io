@@ -4,6 +4,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 html {
 	font-size: 10px;
@@ -135,7 +136,7 @@ p {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
-	color: rgba(240, 248, 255, 0.021);
+	color: rgba(230, 230, 230, 0.021);
 	font-size: 13rem;
 	letter-spacing: 50px;
 	z-index: -1;
@@ -207,7 +208,7 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(./img/hero-bg.png);
+	background-image: url(./img/hero-bg.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -327,6 +328,7 @@ h4::before{
 	box-shadow: 3px 3px 5px lightgray;
 }
 
+
 h3{
 	height: 100%;
 	background-color: rgb(184, 179, 179);
@@ -414,7 +416,8 @@ label:hover{
 }
 
 #check2:checked ~ .img_gallery .gallery .web,
-#check2:checked ~ .img_gallery .gallery .python{
+#check2:checked ~ .img_gallery .gallery .python,
+#check2:checked ~ .img_gallery .gallery .graphic{
 	opacity: 0;
 	transform: scale(0);
 	position: absolute;
@@ -430,12 +433,15 @@ label:hover{
 }
 
 #check3:checked ~ .img_gallery .gallery .ml,
-#check3:checked ~ .img_gallery .gallery .python{
+#check3:checked ~ .img_gallery .gallery .python,
+#check3:checked ~ .img_gallery .gallery .graphic{
 	opacity: 0;
 	transform: scale(0);
 	position: absolute;
 	transition: 0s;
 }
+
+
 
 
 #check4:checked ~ .img_gallery .gallery .python{
@@ -446,7 +452,24 @@ label:hover{
 }
 
 #check4:checked ~ .img_gallery .gallery .ml,
-#check4:checked ~ .img_gallery .gallery .web{
+#check4:checked ~ .img_gallery .gallery .web,
+#check4:checked ~ .img_gallery .gallery .graphic{
+	opacity: 0;
+	transform: scale(0);
+	position: absolute;
+	transition: 0s;
+}
+
+#check5:checked ~ .img_gallery .gallery .graphic{
+	transform: scale(1);
+	opacity: 1;
+	position: relative;
+	
+}
+
+#check5:checked ~ .img_gallery .gallery .ml,
+#check5:checked ~ .img_gallery .gallery .web,
+#check5:checked ~ .img_gallery .gallery .python{
 	opacity: 0;
 	transform: scale(0);
 	position: absolute;
@@ -454,7 +477,9 @@ label:hover{
 }
 
 
-@media only screen and (max-width: 821px){
+
+
+@media only screen and (max-width: 827px){
 	.top-content{
 		display: none;
 	}
@@ -468,6 +493,9 @@ label:hover{
 /* End Projects section */
 
 /* About Section */
+#About{
+	background-color: rgb(135, 231, 223);
+}
 #about .about {
 	flex-direction: column-reverse;
 	text-align: center;
@@ -556,6 +584,7 @@ label:hover{
 	margin-bottom: 5px;
 }
 #contact .contact-info h2 {
+	
 	font-size: 1.3rem;
 	line-height: 2rem;
 	font-weight: 500;
